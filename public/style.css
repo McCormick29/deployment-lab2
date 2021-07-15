@@ -1,0 +1,24 @@
+body {
+    background-color: azure;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+img {
+    margin: 0;
+    padding: 50px;
+    object-position: center top;
+}
+
+section {
+    margin: 0;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    padding: 50px;
+    object-position: center bottom;
+}
+.img-darken {
+    transition: 2s;
+    filter: brightness(10%);
+}
+
