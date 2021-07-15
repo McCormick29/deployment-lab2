@@ -58,9 +58,14 @@
     <script>
         const img = document.querySelector('img')
         img.addEventListener('mouseover', () => {
-            alert('Coding Station')
-            img.addEventListener.class
+            // alert('Coding Station')
+            img.classList.add('img-darken')
         })
+        img.addEventListener('mouseout', () => {
+            // alert('Coding Station')
+            img.classList.remove('img-darken')
+        })
+        
     </script>
 </body>
 </html>
