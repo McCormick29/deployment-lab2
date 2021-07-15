@@ -17,6 +17,7 @@ section {
     padding: 50px;
     object-position: center bottom;
 }
+
 .img-darken {
     transition: 2s;
     filter: brightness(10%);
