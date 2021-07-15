@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/McCormick29/deployment-lab"
+    "url": "https://github.com/McCormick29/deployment-lab2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/McCormick29/deployment-lab",
+  "homepage": "https://github.com/McCormick29/deployment-lab2",
   "dependencies": {
     "express": "^4.17.1"
   }
