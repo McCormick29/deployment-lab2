@@ -16,14 +16,12 @@ function createCallImage(char) {
     charContainer.appendChild(charCard)
   }
 
-
+const api = "https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco/reviews"
 const createCall = (e) => {
 e.preventDefault()
-axios.get('https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972', {headers: {
-    "Authorization": "Bearer QXsqX9cGozZNLknIdM4Xp4jtegeigFDv6q6GY9IMyquKuflUvTPUyXgI-he-w7sQIF5NI8RXJnfuRlrw_IhPoNFVpUZVSSgRxMZlSvIMdg6c5KEOyLQHODE67RwAYXYx" 
-}})
+axios.get(api, {headers: {"Authorization": "Bearer QXsqX9cGozZNLknIdM4Xp4jtegeigFDv6q6GY9IMyquKuflUvTPUyXgI-he-w7sQIF5NI8RXJnfuRlrw_IhPoNFVpUZVSSgRxMZlSvIMdg6c5KEOyLQHODE67RwAYXYx"} })
 .then(response => {
-    console.log(response.data)
+    console.log(Promise)
 })
 .catch(function(err) {
     console.log(err)
