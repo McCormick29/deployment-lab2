@@ -9,13 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/McCormick29/deployment-lab2"
+    "url": "git+https://github.com/McCormick29/deployment-lab2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/McCormick29/deployment-lab2",
   "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/McCormick29/deployment-lab2/issues"
+  },
+  "devDependencies": {}
 }

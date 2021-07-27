@@ -4,18 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about me</title>
+    <title>Adventure</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
 </head>
 <body>
     <nav>
-    <title>Levi's Coding Bio</title> 
-        <img src="https://d.ibtimes.co.uk/en/full/1397132/coding-curriculum-criticism.jpg" alt="image of coding area">
-
+        <div class="left side">
+            <div class="nav-link-wrapper">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="nav-link-wrapper">
+                <div class="nav-components" id="planning-page">Plan</div>
+            </div>
+            <div class="nav-link-wrapper">
+                <a class="nav-components" href="ourTrips.html">Our Trips</a>
+            </div>
+            <div class="nav-components" id="sign-up">Sign up</div>
+            <div class="nav-components" id="sign-in">Sign in</div>
+        </div>
+        
     </nav>
-    <section>
+    
+    <section>    
+    <div class="img-container">
+        <img class="clouds" src="https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHNreXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60" alt="">
+        <h1>
+            Make a plan to get the most out of your adventure.
+        </h1>
+    </div>
 
-        <h2>Bio - Levi McCormick</h2>
+    <div class="input-text"> 
+        <h2>
+            Add your destination zip code and we'll find local restaurants, and refer you to sites for booking. 
+        </h2>
+        <div class="input-container">
+            <form id="submitHandler">
+                <!-- <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br> -->
+                <label for="zCode">Zip Code</label><br>
+                <input type="text" id="zCode" name="zCode">
+                <input type="submit" placeholder="submit">
+            </form>        
+        </div>
+              
+    </div>
+
+    <div class="img-container">
+        <img class="britain" src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80" alt="">
+    </div>
+</section>
+    
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+
+    <!-- <section> -->
+
+        <!-- <h2>Bio - Levi McCormick</h2>
          <p>
             I've lived in Utah my entire life. Utah is where I obtained education through UVU and U of U. UHA (utah handball association) has been a large part of my <br>
             life and extracurricular activity/hobby. Aside from the UHA, I've volunteered my time to physical therapy aid and communitee events. 
@@ -57,8 +106,8 @@
                 </li>
             </ul>
         </div>
-    </section>
-    <script>
+    </section> -->
+    <!-- <script>
         const img = document.querySelector('img')
         img.addEventListener('mouseover', () => {
             // alert('Coding Station')
@@ -69,6 +118,6 @@
             img.classList.remove('img-darken')
         })
         
-    </script>
+    </script> -->
 </body>
 </html>
