@@ -1,27 +1,42 @@
+// const { default: axios } = require("axios")
 
-
-const zCode = document.querySelector('#submitHandler')
-
-function createCallImage(char) {
-    let charCard = document.createElement('div')
-    charCard.innerHTML = `<h3>${char.firstName} ${char.lastName}</h3>
-    <p>gender: ${char.gender} | age: ${char.age}</p>
-    <h4>Likes</h4>
-    <ul>
-      <li>${char.likes[0]}</li>
-      <li>${char.likes[1]}</li>
-      <li>${char.likes[2]}</li>
-    </ul>`
+const zCode = document.querySelector('section')
+const price = document.querySelector('#price')
+const businessContainer = document.querySelector('#call-container')
+console.log(businessContainer)
   
-    charContainer.appendChild(charCard)
-  }
 
-const api = "https://api.yelp.com/v3/businesses/north-india-restaurant-san-francisco/reviews"
+function businessCall(businesses) {
+    let businessesDiv = document.createElement('div')
+    console.log(businessesDiv)
+    businessesDiv.innerHTML = `<h3 class="business">${businesses.name} Phone# ${businesses.phone}</h3>`
+    console.log(businessesDiv)
+      businessContainer.appendChild(businessesDiv)
+}
+
+// function businessPriceCall(businesses) {
+//     let priceDiv = document.createElement('div')
+//     console.log(priceDiv)
+//     priceDiv.innerHTML = `<h4 class="priceBusiness">${businesses.price}</h4>`
+      
+//     console.log(priceDiv)
+//       businessContainer.appendChild(priceDiv)
+// }
+  
 const createCall = (e) => {
-e.preventDefault()
-axios.get(api, {headers: {"Authorization": "Bearer QXsqX9cGozZNLknIdM4Xp4jtegeigFDv6q6GY9IMyquKuflUvTPUyXgI-he-w7sQIF5NI8RXJnfuRlrw_IhPoNFVpUZVSSgRxMZlSvIMdg6c5KEOyLQHODE67RwAYXYx"} })
+  e.preventDefault()
+    const textInput = document.querySelector('#zCode');
+    console.log(textInput.value)
+axios.get(`http://localhost:4005/api/yelp/${textInput.value}`)
 .then(response => {
-    console.log(Promise)
+  console.log(response.data)
+  for (i = 0; i < response.data.businesses.length; i++){
+    businessCall(response.data.businesses[i])
+  }
+  // for (i = 0; i < response.data.businesses.length; i++){
+  //   businessPriceCall(response.data.businesses[i])
+  // } 
+console.log(response.data)
 })
 .catch(function(err) {
     console.log(err)
@@ -29,3 +44,4 @@ axios.get(api, {headers: {"Authorization": "Bearer QXsqX9cGozZNLknIdM4Xp4jtegeig
 }
 
 zCode.addEventListener('submit', createCall);
+// price.addEventListener('click', );

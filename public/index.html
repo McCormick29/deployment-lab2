@@ -11,19 +11,13 @@
 <body>
     <nav>
         <div class="left side">
-            <div class="nav-link-wrapper">
-                <a href="index.html">Home</a>
-            </div>
+                <a class="nav-components" href="index.html">Home</a>
         </div>
         <div class="center">
-            <div class="nav-link-wrapper">
-                <div class="nav-components" id="planning-page">Plan</div>
-            </div>
-            <div class="nav-link-wrapper">
-                <a class="nav-components" href="ourTrips.html">Our Trips</a>
-            </div>
-            <div class="nav-components" id="sign-up">Sign up</div>
-            <div class="nav-components" id="sign-in">Sign in</div>
+            <a class="nav-components" href="planning-page">Plan</a>
+            <a class="nav-components" href="ourTrips.html">Our Trips</a>
+            <a class="nav-components" href="signUp.html">Sign up</a>
+            <a class="nav-components" href="sign-in">Sign in</a>
         </div>
         
     </nav>
@@ -32,28 +26,28 @@
     <div class="img-container">
         <img class="clouds" src="https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHNreXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60" alt="">
         <h1>
-            Make a plan to get the most out of your adventure.
+            Make a plan to get the most out of your adventure
         </h1>
     </div>
 
     <div class="input-text"> 
         <h2>
-            Add your destination zip code and we'll find local restaurants, and refer you to sites for booking. 
+            Add your destination zip code
         </h2>
         <div class="input-container">
             <form id="submitHandler">
-                <!-- <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br> -->
-                <label for="zCode">Zip Code</label><br>
-                <input type="text" id="zCode" name="zCode">
-                <input type="submit" placeholder="submit">
-            </form>        
+                <!-- <label for="zCode" id="textInput">Zip Code</label><br> -->
+
+                <input type="text" id="zCode" name="zCode" placeholder="Zip Code"><br>
+                <label for="checkbox" id="priceLabel">price</label>
+                <input type="checkbox" id="price" placeholder="price"><br>
+                <input id="submit" type="submit" placeholder="submit" onkeypress="clickPress(event)"> 
+            </form>   
         </div>
               
     </div>
 
+    <section id="call-container"></section>
     <div class="img-container">
         <img class="britain" src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80" alt="">
     </div>
@@ -62,51 +56,7 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="index.js"></script>
 
-    <!-- <section> -->
 
-        <!-- <h2>Bio - Levi McCormick</h2>
-         <p>
-            I've lived in Utah my entire life. Utah is where I obtained education through UVU and U of U. UHA (utah handball association) has been a large part of my <br>
-            life and extracurricular activity/hobby. Aside from the UHA, I've volunteered my time to physical therapy aid and communitee events. 
-        </p>
-
-        <div class="favorites">
-            <h2>My Favorites</h2>
-            <ul> Food
-                <li>
-                    Steak
-                </li>
-                <li>
-                    Pizza
-                </li>
-                <li>
-                    Sushi
-                </li>
-            </ul>
-            <ul> Hobbies
-                <li>
-                    Handball
-                </li>
-                <li>
-                    Outdoor Recreation
-                </li>
-                <li>
-                    Several Winter Sports
-                </li>
-            </ul>
-            <ul> Programming languaues/SQL
-                <li>
-                    Python
-                </li>
-                <li>
-                    Javascript
-                </li>
-                <li>
-                    PostgreSQL
-                </li>
-            </ul>
-        </div>
-    </section> -->
     <!-- <script>
         const img = document.querySelector('img')
         img.addEventListener('mouseover', () => {

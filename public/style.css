@@ -1,49 +1,77 @@
 * {
     margin: 0;
     margin: 0;
+    font-family: "Trirong", serif;
 }
 
-    /* navbar styles */
+/* navbar styles */
 nav {
+    opacity: 80%;
     /* position: fixed; */
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 25px;
     background-color: black;
     color: white;
-    font-family: "Trirong", serif;
+    z-index: 4;
 }
 
-.center {
+nav:hover {
+    transition: 1.5s;
+    background-color: black;
+    opacity: 100%;
+}
+
+.left-side {
     display: flex;
     justify-content: space-between;
 }
 
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3%;
+}
+
+a {
+    color: white;
+    /* text-decoration: none; */
+    transition: color 0.5s;
+    /* padding: 2px; */
+    border-bottom: white 1px;
+}
+
+a :hover {
+    border-bottom: 1px solid white;
+    border-bottom: solid;
+}
+
 .nav-components {
+    text-decoration: none;
     padding: 10px;
     z-index: 3;
     color: white;
+    border-bottom: white 1px;
 }
 
 .nav-components:hover {
     transition: .05s;
-    font-size: 20px;
+    color: darkred;
+    /* font-size: 20px; */
 }
 
-#our-trips-page {
+/* #our-trips-page {
     border-bottom: solid white;
     border-top: solid white;
-}
+} */
 
 .img-darken {
     transition: 2s;
     filter: brightness(10%);
 }
-
-* {
-    margin: 0;
-    padding: 0;
-}    
 
 body {
     /* background-repeat: no-repeat;
@@ -71,10 +99,40 @@ section {
     margin: 0;
 }
 
+h1 {
+    /* text-align: center; */
+    font-family: "Trirong", serif;
+    color: 36454F;
+    position: absolute;
+    top: 28%;
+    left: 35%;
+    margin: 0 auto;
+    font-size: 25px;
+    z-index: 1;
+    /* margin-top: -50%;
+    margin-left: -50%; */
+    /* text-align: center; */
+}  
+
 form {
-    display: grid;
-    grid: 1fr;
+    /* display: grid; */
+    /* grid: 1fr; */
+    margin: 0 auto;
+    width: 20%;
+    padding: 5px;
+    float: left;
 }
+
+
+form #submit {
+
+    width: 100px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+
 
 label {
     margin: 0 auto;
@@ -97,19 +155,34 @@ img.clouds {
     margin: 0;
 }    
 
-h1 {
-    /* text-align: center; */
-    font-family: "Trirong", serif;
-    color: 36454F;
-    position: absolute;
-    top: 35%;
-    left: 35%;
+#submit {
     margin: 0 auto;
-    font-size: 25px;
-    z-index: 1;
-    /* margin-top: -50%;
-    margin-left: -50%; */
-    /* text-align: center; */
-}    
+    width: 20%;
+}
+
+#submit:hover {
+    transition: 1s;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
+h3 {
+    float: inline-end;
+    margin: 10 auto;
+    border: solid;
+    padding: 5px;
+}
+
+
+#call-container {
+    grid: 1fr 1fr;
+    margin: 0 auto;
+    font-size: 15px;
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 
 
