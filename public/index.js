@@ -3,45 +3,43 @@
 const zCode = document.querySelector('section')
 const price = document.querySelector('#price')
 const businessContainer = document.querySelector('#call-container')
+const reset = document.querySelector('#reset')
 console.log(businessContainer)
   
 
 function businessCall(businesses) {
     let businessesDiv = document.createElement('div')
+    businessesDiv.setAttribute("id", "createdDiv")
     console.log(businessesDiv)
-    businessesDiv.innerHTML = `<h3 class="business">${businesses.name} Phone# ${businesses.phone}</h3>`
+    businessesDiv.innerHTML = `</h2> <br> <h3 class="business">${businesses.name} <br> Phone: ${businesses.phone} <br> ${businesses.price} <br> ${businesses.location.address1}, ${businesses.location.city}</h3>`
+    if(`${businesses.price}` === undefined){
+      `${businesses.price}` === null
+    }
     console.log(businessesDiv)
       businessContainer.appendChild(businessesDiv)
 }
 
-// function businessPriceCall(businesses) {
-//     let priceDiv = document.createElement('div')
-//     console.log(priceDiv)
-//     priceDiv.innerHTML = `<h4 class="priceBusiness">${businesses.price}</h4>`
-      
-//     console.log(priceDiv)
-//       businessContainer.appendChild(priceDiv)
-// }
-  
-const createCall = (e) => {
-  e.preventDefault()
+  const createCall = (e) => {
+    e.preventDefault()
     const textInput = document.querySelector('#zCode');
     console.log(textInput.value)
-axios.get(`http://localhost:4005/api/yelp/${textInput.value}`)
-.then(response => {
-  console.log(response.data)
-  for (i = 0; i < response.data.businesses.length; i++){
+    axios.get(`http://localhost:4005/api/yelp/${textInput.value}`)
+    .then(response => {
+      console.log(response.data)
+      for (i = 0; i < response.data.businesses.length; i++){
     businessCall(response.data.businesses[i])
   }
-  // for (i = 0; i < response.data.businesses.length; i++){
-  //   businessPriceCall(response.data.businesses[i])
-  // } 
-console.log(response.data)
+  console.log(response.data)
 })
 .catch(function(err) {
-    console.log(err)
+  console.log(err)
 })
 }
 
+function clearContainer() {
+businessContainer.innerHTML = ""
+}
+
+
 zCode.addEventListener('submit', createCall);
-// price.addEventListener('click', );
+reset.addEventListener('click', clearContainer)
