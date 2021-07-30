@@ -49,6 +49,17 @@ a :hover {
     border-bottom: solid;
 }
 
+.brand {
+    font-size: 18px;
+    object-fit: contain;
+    border-radius: 5%;
+    color: white;
+    border-top: solid white;
+    border-bottom: solid white;
+    padding: 3px;
+}
+
+
 .nav-components {
     text-decoration: none;
     padding: 10px;
